@@ -5,8 +5,7 @@ from .models import Product
 
 def index(request):
     products = Product.objects.all()
-    
-    return HttpResponse('Hello world')
+    return render(request, 'index.html', {'products': products})
 
 
 def new(request):
